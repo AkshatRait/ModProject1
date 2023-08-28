@@ -60,7 +60,7 @@ body{
  }
  
  .starting-ball-child{
-     animation:bounce 10s ease-in-out alternate infinite; 
+     animation:bounce 8s ease-in-out alternate infinite; 
      
      background-color: white;
      border-radius: 100%;
@@ -70,21 +70,21 @@ body{
     }
 
     @keyframes bounce {
-        0%{
+    0%{
             transform : translateY(0);
             background-color: white;
         }
-        10%{
+    10%{
             background-color:black ;
         }
-        20%{
+    20%{
             background-color: white;
         }
-        30%{
+    30%{
             background-color:black ;
         }
-        40%{
-        background-color: white;
+    40%{
+     background-color: white;
     }
     50%{
         transform : translateY(250%);
@@ -134,6 +134,7 @@ body{
 #difficulty-screen h2{
        color:white;
        margin: 0%;
+       min-width: auto;
     }
      
   #difficulty-screen button{
@@ -168,8 +169,100 @@ body{
       display: none;
     }
 
+/* Parent */
 
+#horizontal{
+    animation: updown 5s infinite linear; }
+   
 
+    .ball{
+       background-color: black;
+     height:10px;
+     width:10px;
+     padding: 50px;
+     border-radius: 100%;
+     position: absolute;
+   display: block; 
+   border-style:ridge;
+   border-color: white;
+    }
+  /* Children */
+.ball-one {
+    animation: leftright 20s linear infinite;
+  }
+  
+  .ball-two {
+    animation: leftright 23s infinite linear infinite;
+  }
+  
+  .ball-three {
+    animation: leftright 212s infinite linear infinite;
+  }
+  
+  .ball-four {
+    animation: leftright 24s infinite linear infinite;
+  }
+  
+  .ball-five {
+    animation: leftright 5s infinite linear infinite;
+  }
+  
+   @keyframes sizechange {
+    0%,100%{
+        width: 30px;
+        height: 30px; 
+        background-color: black;
+    }
+    25%{
+        width: 70px;
+        height: 70px;
+        background-color: white;
+    }
+    50%{
+        width: 80px;
+        height: 80px;
+        background-color: black;
+    }
+   }
+   
+   @keyframes leftright {
+   0%,100% {
+     transform: translate3d(0vw,0,0);}
+     50% {
+       transform: translate3d(60vw,0,0);
+   }
+   }
+   
+   @keyframes updown {
+      0%, 50%, 100% {
+       transform: translate3d(0, 20vh, 0);
+   }
+   25% {
+       transform: translate3d(0, 0vh, 0);
+   }
+   75% {
+       transform: translate3d(0, 70vh, 0);
+   } }
+
+   #easy-level-passed{
+    height:fit-content;
+
+    background-color: black;
+    display: none;
+    color:white;
+    margin: 0%;
+    min-width: auto;
+    max-height: 10vh;
+    border-color: white;
+    border-style: dashed;
+    animation: pulse 5s ease-in-out alternate infinite; 
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+   }
     
     /* medium game content */
     #medium-game-screen{
@@ -182,3 +275,26 @@ body{
   #hard-game-screen{
     display: none;
   }
+
+
+#next-button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:white;
+    background-color:black;
+    margin:auto;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#next-button:hover{
+    border-color:white;
+    background-color:white;
+    color: black;
+    animation: pulse 2s ease-in-out alternate infinite; 
+}
+
