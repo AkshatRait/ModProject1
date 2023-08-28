@@ -1,0 +1,161 @@
+/* GLOBAL CODE */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+body{
+    background-color: black;
+}
+
+/* Start screen */
+#start-screen{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+#intro-heading{
+    color: white;
+
+    width: 80vw;
+
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding:5px;
+    text-align: center;
+
+    border-color: white;
+    border-style: dashed;
+    font-family: 'Sedgwick Ave Display', cursive;
+    
+}
+
+/* animation */
+ .starting-ball-parent{  
+    display: flex;
+    justify-content: center;
+
+    height: 50%;
+ }
+
+ .starting-ball-child{
+    animation: bounce 10s ease-in-out alternate infinite; 
+    background-color: white;
+    border-radius: 100%;
+
+    height: 50px;
+    width: 50px;
+ }
+
+ @keyframes bounce {
+    0%{
+        transform : translateY(0);
+        background-color: white;
+    }
+    10%{
+        background-color:black ;
+    }
+    20%{
+        background-color: white;
+    }
+    30%{
+        background-color:black ;
+    }
+    40%{
+        background-color: white;
+    }
+    50%{
+        transform : translateY(250%);
+        width: 200px ;
+        height: 200px;
+        border-color: black;
+        border-style:dotted;
+        background-color:black ;
+    }
+    60%{
+        background-color: white;
+    }
+    70%{
+        background-color:black ;
+    }
+    80%{
+        background-color: white;
+    }
+    90%{
+        background-color:black ;
+    }
+    100%{
+        transform : translateY(0);
+        background-color: white;
+    }
+ }
+
+/* difficulty screen code */
+#difficulty-screen{
+    font-family: 'Sedgwick Ave Display', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+     
+    text-align: center;
+    border-color: white;
+    border-style: dashed;
+     
+    max-height:25vh;
+    height:100vh;
+    width: 50%;
+    margin:auto;
+    }   
+#difficulty-screen h2{
+       color:white;
+       margin: 0%;
+    }
+     
+  #difficulty-screen button{
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 70%;
+  
+    color:white;
+    background-color:black;
+  }
+  
+  #difficulty-screen button:hover{
+    border-color:white;
+    background-color:white;
+    color: black;
+  }
+
+
+/* basic code for the play area */
+ .play-area{
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+  }
+
+
+
+  /* easy game content */
+  #easy-game-screen{
+      display: none;
+    }
+
+
+
+    
+    /* medium game content */
+    #medium-game-screen{
+        display: none;
+    }
+
+    
+    
+    /* hard game content */
+  #hard-game-screen{
+    display: none;
+  }
