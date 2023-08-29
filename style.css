@@ -115,7 +115,7 @@ body{
 /* difficulty screen code */
 #difficulty-screen{
     font-family: 'Sedgwick Ave Display', cursive;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
@@ -171,9 +171,8 @@ body{
 
 /* Parent */
 
-#horizontal{
+.horizontal{
     animation: updown 5s infinite linear; }
-   
 
     .ball{
        background-color: black;
@@ -185,26 +184,37 @@ body{
    display: block; 
    border-style:ridge;
    border-color: white;
+   animation: leftright 30s linear infinite;
     }
   /* Children */
 .ball-one {
-    animation: leftright 20s linear infinite;
+    animation: leftright 3s linear infinite;
   }
   
   .ball-two {
-    animation: leftright 23s infinite linear infinite;
+    animation: leftright 1s linear infinite;
   }
   
   .ball-three {
-    animation: leftright 212s infinite linear infinite;
+    animation: leftright 2s linear infinite;
   }
   
   .ball-four {
-    animation: leftright 24s infinite linear infinite;
+    animation: leftright 6s linear infinite;
   }
   
   .ball-five {
-    animation: leftright 5s infinite linear infinite;
+    animation: leftright 5s linear infinite;
+  }
+
+  .ball-six{
+    animation: leftright 2s linear infinite;    
+  }
+  .ball-seven{
+    animation: leftright 3s linear infinite;
+  }
+  .ball-eight{
+    animation: leftright 2s linear infinite;
   }
   
    @keyframes sizechange {
@@ -241,7 +251,7 @@ body{
        transform: translate3d(0, 0vh, 0);
    }
    75% {
-       transform: translate3d(0, 70vh, 0);
+       transform: translate3d(0, 65vh, 0);
    } }
 
    #easy-level-passed{
@@ -250,7 +260,8 @@ body{
     background-color: black;
     display: none;
     color:white;
-    margin: 0%;
+    margin: auto;
+    margin-top: 20px;
     min-width: auto;
     max-height: 10vh;
     border-color: white;
@@ -265,10 +276,62 @@ body{
    }
     
     /* medium game content */
+    .medium-horizontal{
+      animation: updown 5s infinite linear;
+    }
+     
+  #medium-level-passed{
+    height:fit-content;
+
+    background-color: black;
+    display: none;
+    color:white;
+    margin: auto;
+    margin-top: 20px;
+    min-width: auto;
+    max-height: 10vh;
+    border-color: white;
+    border-style: dashed;
+    animation: pulse 5s ease-in-out alternate infinite; 
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+  }
+    
     #medium-game-screen{
         display: none;
     }
+    .ball-six{
+      animation: leftright 2s linear infinite;
+    }
+    .ball-seven {
+      animation: leftright 2s linear infinite;
+    }
+    .ball-eight {
+      animation: leftright 2s linear infinite;
+    }
+   .ball-nine {
+    animation: leftright 2s linear infinite;
+   }
+    .ball-ten {
+      animation: leftright 2s linear infinite;
+    }
+    .ball-eleven {
+      animation: leftright 2s linear infinite;
+    }
+    .ball-twelve {
+      animation: leftright 2s linear infinite;
+    }
+    .ball-thirteen{
+      animation: leftright 2s linear infinite;
+    }
 
+    #medium-next-button{
+      display: none;
+    }
 
     
     /* hard game content */
@@ -284,17 +347,50 @@ body{
     width: 50%;
     text-align: center;
   
-    color:white;
-    background-color:black;
+    color:black;
+    background-color:white;
     margin:auto;
+    margin-top: 20px;
     justify-content: center;
     cursor: pointer;
+    position: static;
 }
 
 #next-button:hover{
-    border-color:white;
-    background-color:white;
-    color: black;
+    border-color:black;
+    background-color:black;
+    color: white;
     animation: pulse 2s ease-in-out alternate infinite; 
 }
 
+#choose-players{
+    color:white;
+    border-color: white;
+    border-style: dotted;
+
+    display: none;
+    flex-direction: column;
+    text-align: center;
+
+    animation: pulse 2s ease-in-out alternate infinite; 
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 70%;
+    margin: auto;
+}
+
+#choose-players button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+    cursor: pointer;
+    position: static;
+}
