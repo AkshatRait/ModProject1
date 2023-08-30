@@ -6,8 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
+    <audio id="background-music" src="./audio/Mad Blade - Ethereal Moonlight  SynthwaveRetrowave.mp3" autoplay loop></audio>
+    </audio>
 </head>
 <body>
+    <audio id="pop-sound" src="./audio/Pop  Sound Effect-[AudioTrimmer.com] (2).mp3"></audio>
+    <audio id="time-is-up" src="./audio/Time out Buzzer Sound effect.mp3"></audio>
     <div id="menu">
         <div id = "score"></div>
         <div id="countdown">10</div>
@@ -25,26 +29,20 @@
 </div>
 <div id = "difficulty-screen">
     <h2>Choose Level:</h2>
-    <button id = "easy-button">Level One</button>
-    <button id = "medium-button">Level Two</button>
-    <button id = "hard-button">Level Three</button>
+    <button id="home">Home</button>
+    <button id ="easy-button">Level One</button>
+    <button id ="medium-button">Level Two</button>
+    <button id ="hard-button">Level Three</button>
 </div>
 <div id="easy-game-screen">
     <div id = "easy-game-play-area" class = "play-area">
         <div class="horizontal">
-            <div class="ball-one ball"></div>
-            <div class="ball-two ball"></div>
-            <div class="ball-three ball"></div>
-            <div class="ball-four ball"></div>
-            <div class="ball-five ball"></div>
-            <div class="ball-six ball"></div>
-            <div class="ball-seven ball"></div>
-            <div class="ball-eight ball"></div>
-            <div class="ball-nine ball"></div>
-            <div class="ball-ten ball"></div>
-            <div class="ball-eleven ball"></div>
-            <div class="ball-twelve ball"></div>
-            <div class="ball-thirteen ball"></div>
+                <img class = "ball-one rotating" src = "./images/Soccer_ball.svg.png" draggable="false"/>
+                <img class = "ball-two rotating" src = "./images/Soccer_ball.svg.png" draggable="false"/>
+                <img class = "ball-three rotating" src = "./images/Soccer_ball.svg.png" draggable="false"/>
+                <img class = "ball-four rotating" src = "./images/Soccer_ball.svg.png" draggable="false"/>
+                <img class = "ball-five rotating" src = "./images/Soccer_ball.svg.png" draggable="false"/>
+                </div>
         </div> 
     </div>
     <div id = "easy-level-passed">
@@ -55,16 +53,16 @@
     <div id="medium-game-screen">
         <div id = "medium-game-play-area" class = "play-area">
             <div class="medium-horizontal">
-                <img class = "ball-one rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-two rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-three rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-four rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-five rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-six rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-seven rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-eight rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-nine rotating" src = "images/cute-ball-games-icon-3.png"/>
-                <img class = "ball-ten rotating" src = "images/cute-ball-games-icon-3.png"/>
+                <img class = "ball-one rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-two rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-three rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-four rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-five rotating" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
+                <img class = "ball-six rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-seven rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-eight rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-nine rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-ten rotating" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
                 </div>
             </div> 
             <div id = "medium-level-passed">
@@ -74,7 +72,14 @@
         <button id = "medium-next-button">Next</button>
     </div>
     <div id="hard-game-screen">
-        <div id = "medium-game-play-area" class = "play-area">
+        <div class="dropdown">
+            <h2 class="dropbtn">Choose a type of ball</h2>
+            <div class="dropdown-content">
+              <button id ="spikeball">SpikeBall</a>
+              <button id ="basketball">BasketBall</a>
+              <button id ="beachball">BeachBall</a>
+            </div>
+          </div>
         </div>
     </div>
 </div>

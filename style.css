@@ -1,6 +1,9 @@
 /* GLOBAL CODE */
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-
+*{
+  user-select: none;
+  cursor: crosshair;
+}
 body{
     background-color: black;
     box-sizing: border-box;
@@ -17,15 +20,12 @@ body{
 }
 /* intro animation */
 @keyframes pulse {
-    0%{
-        font-size: x-large;
+    0%,100%{
+        font-size: large;
     }
     50%{
-        font-size: xx-large;
-        padding: 10px;
-    }
-    100%{
         font-size: x-large;
+        padding: 5px;
     }
 }
 
@@ -160,6 +160,7 @@ body{
     height: 80vh;
     width: 80vw;
     margin: auto;
+
   }
 
 
@@ -168,31 +169,23 @@ body{
   #easy-game-screen{
       display: none;
     }
-
 /* Parent */
 
 .horizontal{
-    animation: updown 6s infinite linear; }
+  animation: updown 5s infinite linear; }
 
-    .ball{
-       background-color: black;
-     height:10px;
-     width:10vh;
-     padding: 50px;
-     border-radius: 100%;
-     position: absolute;
-   display: block; 
-   border-style:ridge;
-   border-color: white;
-   animation: leftright 30s linear infinite;
+    .horizontal img{
+      height:80px;
+      width:80px;
+      position: absolute;
+      display: block;
     }
 
     .medium-horizontal img{
-      height:20vh;
-      width:20vw;
+      height:80px;
+      width:80px;
       position: absolute;
       display: block;
-      cursor: pointer; 
     }
 
   /* Children */
@@ -201,7 +194,7 @@ body{
   }
   
   .ball-two {
-    animation: leftright 1s linear infinite;
+    animation: leftright 3s linear infinite;
   }
   
   .ball-three {
@@ -237,7 +230,7 @@ body{
   }
   
   .ball-eleven {
-    animation: leftright 1.5s linear infinite;
+    animation: leftright 3s linear infinite;
   }
   
   .ball-twelve {
@@ -245,7 +238,7 @@ body{
   }
   
   .ball-thirteen {
-    animation: leftright 5s linear infinite, sizechange 4s linear infinite;
+    animation: leftright 5s linear infinite;
   }
   
 
@@ -339,11 +332,8 @@ body{
         display: none;
     }
 
-    #medium-next-button{
-      display: none;
-    }
 
-    
+
     /* hard game content */
   #hard-game-screen{
     display: none;
@@ -362,7 +352,7 @@ body{
     margin:auto;
     margin-top: 20px;
     justify-content: center;
-    cursor: pointer;
+
     position: static;
 }
 
@@ -401,7 +391,6 @@ body{
     margin:auto;
     margin-top: 20px;
     justify-content: center;
-    cursor: pointer;
     position: static;
 }
 
@@ -441,4 +430,53 @@ body{
 #menu{
   display: flex;
   justify-content: space-between;
+}
+
+#medium-next-button{
+  display: none;
+  font-family: 'Sedgwick Ave Display', cursive;
+  padding:5px;
+  width: 50%;
+  text-align: center;
+
+  color:black;
+  background-color:white;
+  margin:auto;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#medium-next-button:hover{
+  border-color:black;
+  background-color:black;
+  color: white;
+  animation: pulse 2s ease-in-out alternate infinite; 
+}
+
+#home{
+  margin-bottom: 20px;
+  width:50% !important;
+  color: black!important;
+    background-color: white!important;
+}
+
+#home:hover{
+  color: white!important;
+    background-color: black!important;
+}
+
+.dropbtn{
+  color: white;
+  background-color: black;
+  border-style: dotted;
+  border-color:white;
+  font-family: 'Sedgwick Ave Display', cursive;
+  width: fit-content;
+  padding:10px;
+}
+
+.dropdown-content{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
