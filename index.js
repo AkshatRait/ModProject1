@@ -1,6 +1,7 @@
 const backgroundMusic = document.getElementById('background-music')
 const buttonSound = document.getElementById('pop-sound');
 const timeIsUp = document.getElementById('time-is-up');
+
 backgroundMusic.volume = 0.2;
 
 const startScreen = document.getElementById('start-screen');
@@ -22,6 +23,7 @@ introBall.addEventListener('click', ()=>{
     playerOne.style.display = "block";
     playerTwo.style.display = "block";
     buttonSound.play();
+    backgroundMusic.play();
 })
 
 playerOne.addEventListener('click',()=>{
@@ -54,7 +56,8 @@ const easyGameScreen = document.getElementById('easy-game-screen');
 const mediumGameScreen = document.getElementById('medium-game-screen');
 const hardGameScreen = document.getElementById('hard-game-screen');
 
-const restartButton = document.createElement('div');restartButton.textContent = '↻';
+const restartButton = document.createElement('div');
+restartButton.textContent = '↻';
 
 //!SECTION easy level
 const easyGamePlayArea = document.getElementById('easy-game-play-area');
@@ -200,13 +203,75 @@ const mediumLevelFunction = ()=>{
     })
 }
 
-
+const hardGamePlayArea = document.getElementById("hard-game-play-area")
 
 
 
 hardButton.addEventListener("click",()=>{
     difficultyScreen.style.display = "none";
+    hardGamePlayArea.style.display = "block";
+    hardGamePlayArea.style.backgroundColor= "black";
     hardGameScreen.style.display='block';
+    buttonSound.play();
 })
 
+
+
+const spikeBall = document.getElementById('spikeball');
+const basketBall = document.getElementById('basketball');
+const beachBall = document.getElementById('beachball');
+const displayOfBalls = document.getElementById('ball-display');
+const dropDown = document.querySelector(".dropdown")
+let array = [];
+spikeBall.addEventListener('click', () => {
+    const spikeBallImage = document.createElement("img");
+    spikeBallImage.src = "https://mario.wiki.gallery/images/thumb/2/26/NSMBW_Spike_Ball_Artwork.png/1200px-NSMBW_Spike_Ball_Artwork.png";
+    displayOfBalls.appendChild(spikeBallImage);
+    buttonSound.play();
+
+    spikeBallImage.addEventListener("click", () => {
+        hardGameScreen.style.display = 'block';
+        buttonSound.play();
+        dropDown.style.display = "none";
+        hardGamePlayArea.style.backgroundColor = "white";
+        spikeBallImage.style.display = "none";
+        for (let i = 0; i < 10; i++) {
+            const spikeBallImageForGame = document.createElement('img');
+            spikeBallImageForGame.src = "https://mario.wiki.gallery/images/thumb/2/26/NSMBW_Spike_Ball_Artwork.png/1200px-NSMBW_Spike_Ball_Artwork.png";
+            hardGamePlayArea.appendChild(spikeBallImageForGame);
+            spikeBallImageForGame.classList.add('hard-ball');
+            spikeBallImageForGame.classList.add('horizontal');
+            spikeBallImageForGame.classList.add('rotating');
+            array.push(spikeBallImageForGame);
+        }
+
+        // Add class names based on index
+        array[0].classList.add("ball-one");
+        array[1].classList.add("ball-two");
+        array[2].classList.add("ball-three");
+        array[3].classList.add("ball-four");
+        array[4].classList.add("ball-five");
+        array[5].classList.add("ball-six");
+        array[6].classList.add("ball-seven");
+        array[7].classList.add("ball-eight");
+        array[8].classList.add("ball-nine");
+        array[9 ].classList.add("ball-ten");
+
+        console.log(array);
+    });
+}, { once: true });
+
+basketBall.addEventListener('click', () => {
+    buttonSound.play();
+    const basketBallImage = document.createElement("img");
+    basketBallImage.src = "https://clipart-library.com/image_gallery2/Basketball-PNG-HD.png";
+    displayOfBalls.appendChild(basketBallImage);
+}, { once: true });
+
+beachBall.addEventListener('click', () => {
+    buttonSound.play();
+    const beachBallImage = document.createElement("img");
+    beachBallImage.src = "https://clipart-library.com/image_gallery2/Beach-Ball-PNG-Image.png";
+    displayOfBalls.appendChild(beachBallImage);
+}, { once: true });
 

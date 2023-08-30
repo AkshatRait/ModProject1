@@ -465,18 +465,55 @@ body{
     background-color: black!important;
 }
 
-.dropbtn{
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   background-color: black;
   border-style: dotted;
   border-color:white;
   font-family: 'Sedgwick Ave Display', cursive;
-  width: fit-content;
+  width:50%;
   padding:10px;
+  margin: auto;
+  justify-content: center;
+}
+.dropbtn{
+  text-align: center;
+}
+.dropdown-content{
+  
+  width: fit-content;
+  
 }
 
-.dropdown-content{
+.dropdown-content button{
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: white;
+  background-color: black;
+  border-color: white;
+  padding:5px;
+  margin:5px;
+}
+
+#ball-display{
+  width:50%;
+  height:50vh;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  align-items: center;
+
+}
+
+#ball-display img{
+  width:20vw;
+  height: 20vh;
+  max-height: 50vh;
+}
+
+.hard-ball{
+  height:80px;
+  width:80px;
 }
