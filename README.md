@@ -9,7 +9,6 @@ A simple web-based game where you tap on balls to score points. The game has dif
 - [How to Play](#how-to-play)
 - [Game Levels](#game-levels)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
