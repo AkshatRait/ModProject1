@@ -29,7 +29,7 @@ To get a local copy of the project up and running, follow these steps:
 + Each level has its own set of rules and challenges.
 +Try to achieve the highest score possible!
 ## Game Levels
-###Easy Level
+### Easy Level
 + The simplest level to get you started.
 + Balls move horizontally across the screen.
 + Click on them to score points.
