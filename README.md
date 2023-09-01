@@ -29,22 +29,20 @@ To get a local copy of the project up and running, follow these steps:
 + Each level has its own set of rules and challenges.
 +Try to achieve the highest score possible!
 ## Game Levels
-### Easy Level
+### Level 1 - Easy Level
 + The simplest level to get you started.
 + Balls move horizontally across the screen.
 + Click on them to score points.
 + Passing this level unlocks the next difficulty.
-### Medium Level
+### Level 2 -Medium Level
 + A bit more challenging.
 + Balls move both horizontally and vertically.
 + Click on them to score points.
 + Complete this level to unlock the hardest difficulty.
-### Hard Level
+### Level 3 -Hard Level
 + The most challenging level.
 + Choose your ball type (SpikeBall, BasketBall, or BeachBall).
-+Customize the number of balls to make it even more difficult.
 + Click on the balls to score points.
-+ See if you can beat your high score!
 ## Contributing
 If you'd like to contribute to the project, please follow these steps:
 
