@@ -3,10 +3,28 @@ const backgroundMusic = document.getElementById('background-music')
 const buttonSound = document.getElementById('pop-sound');
 const timeIsUp = document.getElementById('time-is-up');
 backgroundMusic.volume = 0.2;
-
+const bodyElem = document.querySelector('body');
 
 // INTRO
-const startScreen = document.getElementById('start-screen');
+const backgroundColor = document.getElementById('color');
+backgroundColor.addEventListener('change', function() {
+    const selectedColor = backgroundColor.value;
+    if (selectedColor === "red") {
+        bodyElem.style.backgroundColor = "crimson";
+    } else if (selectedColor === "blue") {
+        bodyElem.style.backgroundColor = "navy";
+    }else if (selectedColor === "default") {
+        bodyElem.style.backgroundColor = "black";
+    } else if (selectedColor === "green") {
+        bodyElem.style.backgroundColor = "palegreen";
+    } else if (selectedColor === "yellow") {
+        bodyElem.style.backgroundColor = "yellow";
+    } else {
+        bodyElem.style.backgroundColor = ""; // Reset to default background color
+    }
+});
+
+startScreen = document.getElementById('start-screen');
 const introBall = document.querySelector(".starting-ball-child");
 const difficultyScreen = document.getElementById('difficulty-screen');
 const players = document.getElementById('choose-players');
@@ -306,9 +324,6 @@ spikeBall.addEventListener('click', () => {
         mediumNextButton.style.display = "none";
         scoreDisplay.style.display = "none";
         hardButton.style.pointerEvents = "none";
-        // hardButton.style.textDecoration = "line-through";
-        // hardButton.style.backgroundColor = "white"; 
-        // hardButton.style.color = "black"; 
         countdownElement.style.display = "none";
         buttonSound.play();
         hardNextButton.style.display = "none";
