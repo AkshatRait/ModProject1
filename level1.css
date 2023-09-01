@@ -1,0 +1,24 @@
+#easy-game-screen{
+    display: none;
+  }
+
+#easy-level-passed{
+    height:fit-content;
+    background-color: black;
+    display: none;
+    color:white;
+    margin: auto;
+    margin-top: 20px;
+    min-width: auto;
+    max-height: 10vh;
+    border-color: white;
+    border-style: dashed;
+    animation: pulse 5s ease-in-out alternate infinite; 
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+  
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+     }
+  

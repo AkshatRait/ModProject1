@@ -1,0 +1,125 @@
+#hard-next-button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  #hard-next-button:hover{
+    display:none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .dropdown-content button{
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: white;
+    background-color: black;
+    border-color: white;
+    padding:5px;
+    margin:5px;
+  }
+  
+  #home{
+    margin-bottom: 20px;
+    width:50% !important;
+    color: black!important;
+      background-color: white!important;
+  }
+  
+  #home:hover{
+    color: white!important;
+      background-color: black!important;
+  }
+
+  #medium-next-button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  #medium-next-button:hover{
+    border-color:black;
+    background-color:black;
+    color: white;
+    /* animation: pulse 2s ease-in-out alternate infinite;  */
+  }
+
+  #choose-players button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+    position: static;
+}
+
+#next-button{
+    display: none;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 50%;
+    text-align: center;
+  
+    color:black;
+    background-color:white;
+    margin:auto;
+    margin-top: 20px;
+    justify-content: center;
+
+    position: static;
+}
+
+#next-button:hover{
+    border-color:black;
+    background-color:black;
+    color: white;
+    /* animation: pulse 2s ease-in-out alternate infinite;  */
+}
+
+
+#difficulty-screen button{
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5px;
+    width: 70%;
+  
+    color:white;
+    background-color:black;
+  }
+  
+  #difficulty-screen button:hover{
+    border-color:white;
+    background-color:white;
+    color: black;
+    /* animation: pulse 2s ease-in-out alternate infinite;  */
+  }
+

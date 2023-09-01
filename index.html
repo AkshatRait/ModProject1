@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="level1.css">
+    <link rel="stylesheet" href="level2.css">
+    <link rel="stylesheet" href="level3.css">
     <script src="index.js" defer></script>
     <audio id="background-music" src="./audio/Mad Blade - Ethereal Moonlight  SynthwaveRetrowave.mp3" autoplay loop></audio>
     </audio>
@@ -51,18 +56,18 @@
 </div>
     <button id = "next-button">Next</button>
     <div id="medium-game-screen">
-        <div id = "medium-game-play-area" class = "play-area">
+        <div id = "medium-game-play-area" class ="play-area">
             <div class="medium-horizontal">
-                <img class = "ball-one rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-two rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-three rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-four rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-five rotating" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
-                <img class = "ball-six rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-seven rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-eight rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-nine rotating" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
-                <img class = "ball-ten rotating" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
+                <img class = "ball-one padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-two padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-three padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-four padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-five padding-image" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
+                <img class = "ball-six padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-seven padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-eight padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-nine padding-image" src = "images/cute-ball-games-icon-3.png" draggable="false"/>
+                <img class = "ball-ten padding-image" src = "images/cute-ball-games-icon-3.png"draggable="false"/>
                 </div>
             </div> 
             <div id = "medium-level-passed">
@@ -82,9 +87,15 @@
             </div>
         </div>
         <div id = "ball-display">
-            
         </div>
-    </div>
+        <input id ="choose-ball-amount" required placeholder="number">
+        <div id="game-area-for-choice-of-balls">
+            </div>
+        </div>
+        <div id = "hard-level-passed">
+            <h2>Good Job! You passed the Hard level.</h2>
+        </div>
+        <button id = "hard-next-button">Next</button>
         </div>
     </div>
 </div>

@@ -1,0 +1,50 @@
+    /* medium game content */
+    .medium-horizontal{
+        animation: updown 5s infinite linear;
+      }
+       
+    #medium-level-passed{
+      height:fit-content;
+  
+      background-color: black;
+      display: none;
+      color:white;
+      margin: auto;
+      margin-top: 20px;
+      min-width: auto;
+      max-height: 10vh;
+      border-color: white;
+      border-style: dashed;
+      animation: pulse 5s ease-in-out alternate infinite; 
+      text-align: center;
+      font-family: 'Sedgwick Ave Display', cursive;
+  
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items:center;
+    }
+      
+      #medium-game-screen{
+          display: none;
+      }
+
+      
+#hard-level-passed{
+    height:fit-content;
+    background-color: black;
+      display: none;
+      color:white;
+      margin: auto;
+      margin-top: 20px;
+      min-width: auto;
+      max-height: 10vh;
+      border-color: white;
+      border-style: dashed;
+      animation: pulse 5s ease-in-out alternate infinite; 
+      text-align: center;
+      font-family: 'Sedgwick Ave Display', cursive;
+  
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items:center;
+  }

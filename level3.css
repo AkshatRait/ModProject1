@@ -1,0 +1,65 @@
+#hard-game-screen{
+    display: none;
+  }
+
+  .dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-style: dotted;
+    border-color:white;
+    font-family: 'Sedgwick Ave Display', cursive;
+    width:50%;
+    padding:10px;
+    margin: auto;
+    justify-content: center;
+  }
+  .dropbtn{
+    text-align: center;
+  }
+  .dropdown-content{
+    
+    width: fit-content;
+    
+  }
+  
+  #ball-display{
+    width:50%;
+    height:50vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  #ball-display img{
+    width:20vw;
+    height: 20vh;
+    max-height: 50vh;
+  }
+  
+  .hard-ball{
+    height:80px;
+    width:80px;
+    position: relative;
+    display: block;
+  }
+  
+  #choose-ball-amount{
+    display: none;
+    width : 50%;
+    justify-content: center;
+  }
+  
+  #basketball{
+    text-decoration: line-through;
+    pointer-events: none;
+  }
+  
+  #beachball{
+    text-decoration: line-through;
+    pointer-events: none;
+  }

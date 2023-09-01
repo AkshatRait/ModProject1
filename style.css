@@ -1,63 +1,94 @@
 /* GLOBAL CODE */
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
 *{
   user-select: none;
   cursor: crosshair;
 }
+
+/* Body Code */
 body{
-    background-color: black;
-    box-sizing: border-box;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+/* MENU ITEMS */
+#score{
+  display: none;
+  color:black; 
+  background-color:white;
+  border-color:black;
+  border-style: solid;
+  padding: 10px;
+  width: 20vw;
+  height: 5vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sedgwick Ave Display', cursive;
+  /* animation: pulse 2s ease-in-out alternate infinite; */
+}
+
+#countdown{
+  display: none;
+  color:black; 
+  background-color:white;
+  border-color:black;
+  border-style: solid;
+  padding: 10px;
+  width: 20vw;
+  height: 5vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sedgwick Ave Display', cursive;
+  /* animation: pulse 2s ease-in-out alternate infinite; */
+}
+
+#menu{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Start screen */
+#intro-heading{  
+  /* animation: pulse 2s ease-in-out alternate infinite;  */
+  color: white;
+  
+  width: 80vw;
+  height: 50px;
+  margin: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding:5px;
+  text-align: center;
+  
+  border-color: white;
+  border-style: dashed;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size:xx-large;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #start-screen{
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  
     align-items: center;
     margin: auto;
     height: 100vh;
 }
-/* intro animation */
-@keyframes pulse {
-    0%,100%{
-        font-size: large;
-    }
-    50%{
-        font-size: x-large;
-        padding: 5px;
-    }
-}
 
-#intro-heading{
-    animation: pulse 2s ease-in-out alternate infinite; 
-    color: white;
-    
-    width: 80vw;
-    height: 50px;
-    margin: auto;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding:5px;
-    text-align: center;
-    
-    border-color: white;
-    border-style: dashed;
-    font-family: 'Sedgwick Ave Display', cursive;
-    font-size:xx-large;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* starting ball animation */
+/* INTRO BALL */
 .starting-ball-parent{  
     display: flex;
     justify-content: center;
-    
+     animation: pulse 2s ease-in-out alternate infinite;
     height: 50%;
- }
+ }   
  
  .starting-ball-child{
      animation:bounce 8s ease-in-out alternate infinite; 
@@ -67,50 +98,7 @@ body{
      
      height: 50px;
      width: 50px;
-    }
-
-    @keyframes bounce {
-    0%{
-            transform : translateY(0);
-            background-color: white;
-        }
-    10%{
-            background-color:black ;
-        }
-    20%{
-            background-color: white;
-        }
-    30%{
-            background-color:black ;
-        }
-    40%{
-     background-color: white;
-    }
-    50%{
-        transform : translateY(250%);
-        width: 200px ;
-        height: 200px;
-        border-color: black;
-        border-style:dotted;
-        background-color:black ;
-    }
-    60%{
-        background-color: white;
-    }
-    70%{
-        background-color:black ;
-    }
-    80%{
-        background-color: white;
-    }
-    90%{
-        background-color:black ;
-    }
-    100%{
-        transform : translateY(0);
-        background-color: white;
-    }
- }
+    } 
 
 /* difficulty screen code */
 #difficulty-screen{
@@ -124,53 +112,50 @@ body{
     text-align: center;
     border-color: white;
     border-style: dashed;
-     
-    max-height:25vh;
-    height:100vh;
     width: 50%;
     margin:auto;
     padding:20px;
-    }   
-#difficulty-screen h2{
-       color:white;
-       margin: 0%;
-       min-width: auto;
-    }
-     
-  #difficulty-screen button{
-    font-family: 'Sedgwick Ave Display', cursive;
-    padding:5px;
-    width: 70%;
+  }   
   
+  #difficulty-screen h2{  
     color:white;
-    background-color:black;
-  }
-  
-  #difficulty-screen button:hover{
-    border-color:white;
-    background-color:white;
-    color: black;
-    animation: pulse 2s ease-in-out alternate infinite; 
-  }
-
-
-/* basic code for the play area */
- .play-area{
+    margin: 0%;
+    min-width: auto;
+  }   
+  /* TODO - basic code for the play area */
+  .play-area{
     background-color: white;
     height: 80vh;
     width: 80vw;
     margin: auto;
+    
 
+  }
+  
+  .play-area img{
+    height: 100%;
+    width: 100%;
+
+    padding-top: 0px;
+    padding-left: 0px;
+
+    
   }
 
 
+  .medium-game-play-area{
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    
+    border-style: dotted;
+    border-color: white;
+    
+    overflow: hidden;
+  }
 
-  /* easy game content */
-  #easy-game-screen{
-      display: none;
-    }
-/* Parent */
-
+    /* Parent for the balls */
 .horizontal{
   animation: updown 5s infinite linear; }
 
@@ -188,332 +173,25 @@ body{
       display: block;
     }
 
-  /* Children */
-  .ball-one {
-    animation: leftright 3s linear infinite;
-  }
-  
-  .ball-two {
-    animation: leftright 3s linear infinite;
-  }
-  
-  .ball-three {
-    animation: leftright 2s linear infinite;
-  }
-  
-  .ball-four {
-    animation: leftright 5s linear infinite;
-  }
-  
-  .ball-five {
-    animation: leftright 4.5s linear infinite;
-  }
-  
-  .ball-six {
-    animation: leftright 2s linear infinite;
-  }
-  
-  .ball-seven {
-    animation: leftright 3.5s linear infinite;
-  }
-  
-  .ball-eight {
-    animation: leftright 4.1s linear infinite;
-  }
-  
-  .ball-nine {
-    animation: leftright 3s linear infinite;
-  }
-  
-  .ball-ten {
-    animation: leftright 2.1s linear infinite;
-  }
-  
-  .ball-eleven {
-    animation: leftright 3s linear infinite;
-  }
-  
-  .ball-twelve {
-    animation: leftright 5s linear infinite;
-  }
-  
-  .ball-thirteen {
-    animation: leftright 5s linear infinite;
-  }
-  
-
-
-  @keyframes sizechange {
-    0%,100%{
-      width: 30px;
-      height: 30px; 
-      background-color: black;
-    }
-    25%{
-      width: 70px;
-      height: 70px;
-      background-color: white;
-    }
-    50%{
-      width: 80px;
-      height: 80px;
-      background-color: black;
-    }
-  }
-  
-  @keyframes leftright {
-    0%, 100% {
-      transform: translate3d(0vw, 0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate3d(60vw, 0, 0) rotate(360deg);
-    }
-  }
-      
-      @keyframes updown {
-        0%, 50%, 100% {
-          transform: translate3d(0, 20vh, 0);
-        }
-        25% {
-          transform: translate3d(0, 0vh, 0);
-        }
-        75% {
-          transform: translate3d(0, 65vh, 0);
-        } }
-        
-        #easy-level-passed{
-          height:fit-content;
-          
-          background-color: black;
-          display: none;
-    color:white;
-    margin: auto;
-    margin-top: 20px;
-    min-width: auto;
-    max-height: 10vh;
-    border-color: white;
-    border-style: dashed;
-    animation: pulse 5s ease-in-out alternate infinite; 
-    text-align: center;
-    font-family: 'Sedgwick Ave Display', cursive;
-
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items:center;
-   }
-    
-    /* medium game content */
-    .medium-horizontal{
-      animation: updown 5s infinite linear;
-    }
-     
-  #medium-level-passed{
-    height:fit-content;
-
-    background-color: black;
-    display: none;
-    color:white;
-    margin: auto;
-    margin-top: 20px;
-    min-width: auto;
-    max-height: 10vh;
-    border-color: white;
-    border-style: dashed;
-    animation: pulse 5s ease-in-out alternate infinite; 
-    text-align: center;
-    font-family: 'Sedgwick Ave Display', cursive;
-
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items:center;
-  }
-    
-    #medium-game-screen{
-        display: none;
-    }
-
-
-
-    /* hard game content */
-  #hard-game-screen{
-    display: none;
-  }
-
-
-#next-button{
-    display: none;
-    font-family: 'Sedgwick Ave Display', cursive;
-    padding:5px;
-    width: 50%;
-    text-align: center;
-  
-    color:black;
-    background-color:white;
-    margin:auto;
-    margin-top: 20px;
-    justify-content: center;
-
-    position: static;
-}
-
-#next-button:hover{
-    border-color:black;
-    background-color:black;
-    color: white;
-    animation: pulse 2s ease-in-out alternate infinite; 
-}
-
+/* PLAYERS */
 #choose-players{
     color:white;
     border-color: white;
     border-style: dotted;
 
+     animation: pulse 2s ease-in-out alternate infinite;
     display: none;
     flex-direction: column;
     text-align: center;
 
-    animation: pulse 2s ease-in-out alternate infinite; 
+    /* animation: pulse 2s ease-in-out alternate infinite;  */
     font-family: 'Sedgwick Ave Display', cursive;
     padding:5px;
     width: 70%;
     margin: auto;
 }
 
-#choose-players button{
-    display: none;
-    font-family: 'Sedgwick Ave Display', cursive;
-    padding:5px;
-    width: 50%;
-    text-align: center;
-  
-    color:black;
-    background-color:white;
-    margin:auto;
-    margin-top: 20px;
-    justify-content: center;
-    position: static;
-}
-
-
-#score{
-  display: none;
-  color:black; 
-  background-color:white;
-  border-color:black;
-  border-style: solid;
-  padding: 10px;
-  width: 20vw;
-  height: 5vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Sedgwick Ave Display', cursive;
-  animation: pulse 2s ease-in-out alternate infinite;
-}
-
-#countdown{
-  display: none;
-  color:black; 
-  background-color:white;
-  border-color:black;
-  border-style: solid;
-  padding: 10px;
-  width: 20vw;
-  height: 5vh;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Sedgwick Ave Display', cursive;
-  animation: pulse 2s ease-in-out alternate infinite;
-}
-
-#menu{
-  display: flex;
-  justify-content: space-between;
-}
-
-#medium-next-button{
-  display: none;
-  font-family: 'Sedgwick Ave Display', cursive;
-  padding:5px;
-  width: 50%;
-  text-align: center;
-
-  color:black;
-  background-color:white;
-  margin:auto;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-#medium-next-button:hover{
-  border-color:black;
-  background-color:black;
-  color: white;
-  animation: pulse 2s ease-in-out alternate infinite; 
-}
-
-#home{
-  margin-bottom: 20px;
-  width:50% !important;
-  color: black!important;
-    background-color: white!important;
-}
-
-#home:hover{
-  color: white!important;
-    background-color: black!important;
-}
-
-.dropdown{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  background-color: black;
-  border-style: dotted;
-  border-color:white;
-  font-family: 'Sedgwick Ave Display', cursive;
-  width:50%;
-  padding:10px;
-  margin: auto;
-  justify-content: center;
-}
-.dropbtn{
-  text-align: center;
-}
-.dropdown-content{
-  
-  width: fit-content;
-  
-}
-
-.dropdown-content button{
-  font-family: 'Sedgwick Ave Display', cursive;
-  color: white;
-  background-color: black;
-  border-color: white;
-  padding:5px;
-  margin:5px;
-}
-
-#ball-display{
-  width:50%;
-  height:50vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-#ball-display img{
-  width:20vw;
-  height: 20vh;
-  max-height: 50vh;
-}
-
-.hard-ball{
-  height:80px;
-  width:80px;
+#player-two{
+  text-decoration: line-through;
+  pointer-events: none;
 }

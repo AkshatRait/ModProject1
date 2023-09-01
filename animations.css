@@ -1,0 +1,149 @@
+/* ANIMATIONS */
+@keyframes pulse {
+    0%,100%{
+        font-size: 3vh;
+    }
+    50%{
+        font-size: 4vh;
+        padding: 5px;
+    }
+}
+
+@keyframes bounce {
+    0%{
+      transform : translateY(0);
+      background-color: white;
+        }
+    10%{
+      background-color:black ;
+        }
+    20%{
+      background-color: white;
+        }
+    30%{
+      background-color:black ;
+        }
+    40%{
+     background-color: white;
+    }
+    50%{
+        transform : translateY(250%);
+        width: 200px ;
+        height: 200px;
+        border-color: black;
+        border-style:dotted;
+        background-color:black ;
+    }
+    60%{
+        background-color: white;
+    }
+    70%{
+        background-color:black ;
+    }
+    80%{
+        background-color: white;
+    }
+    90%{
+        background-color:black ;
+    }
+    100%{
+        transform : translateY(0);
+        background-color: white;
+    }
+ }
+ 
+ @keyframes sizechange {
+  0%,100%{
+    width: 30px;
+    height: 30px; 
+    background-color: black;
+  }
+  25%{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+  }
+  50%{
+    width: 80px;
+    height: 80px;
+    background-color: black;
+  }
+}
+
+@keyframes leftright {
+  0%, 100% {
+    transform: translate3d(0vw, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(60vw, 0, 0) rotate(360deg);
+  }
+}
+    
+    @keyframes updown {
+      0%, 50%, 100% {
+        transform: translate3d(0, 20vh, 0);
+      }
+      25% {
+        transform: translate3d(0, 0vh, 0);
+      }
+      75% {
+        transform: translate3d(0, 65vh, 0);
+      } }
+
+      
+        /* Children */
+  .ball-one {
+    animation: leftright 3s linear infinite;
+  }
+  
+  .ball-two {
+    animation: leftright 3s linear infinite;
+  }
+  
+  .ball-three {
+    animation: leftright 2s linear infinite;
+  }
+  
+  .ball-four {
+    animation: leftright 5s linear infinite;
+  }
+  
+  .ball-five {
+    animation: leftright 4.5s linear infinite;
+  }
+  
+  .ball-six {
+    animation: leftright 2s linear infinite;
+  }
+  
+  .ball-seven {
+    animation: leftright 3.5s linear infinite;
+  }
+  
+  .ball-eight {
+    animation: leftright 4.1s linear infinite;
+  }
+  
+  .ball-nine {
+    animation: leftright 3s linear infinite;
+  }
+  
+  .ball-ten {
+    animation: leftright 2.1s linear infinite;
+  }
+  
+  .ball-eleven {
+    animation: leftright 3s linear infinite;
+  }
+  
+  .ball-twelve {
+    animation: leftright 5s linear infinite;
+  }
+  
+  .ball-thirteen {
+    animation: leftright 5s linear infinite;
+  }
+  
+.padding-image{
+  padding:10px;
+}
