@@ -6,11 +6,14 @@ backgroundMusic.volume = 0.2;
 const bodyElem = document.querySelector('body');
 
 // INTRO
+const ball = document.getElementById('starting-ball-child')
 const backgroundColor = document.getElementById('color');
 backgroundColor.addEventListener('change', function() {
     const selectedColor = backgroundColor.value;
-    if (selectedColor === "red") {
+
+     if (selectedColor === "red") {
         bodyElem.style.backgroundColor = "crimson";
+
     } else if (selectedColor === "blue") {
         bodyElem.style.backgroundColor = "navy";
     }else if (selectedColor === "default") {
@@ -19,7 +22,8 @@ backgroundColor.addEventListener('change', function() {
         bodyElem.style.backgroundColor = "palegreen";
     } else if (selectedColor === "yellow") {
         bodyElem.style.backgroundColor = "yellow";
-    } else {
+    }
+    else {
         bodyElem.style.backgroundColor = ""; // Reset to default background color
     }
 });
@@ -65,7 +69,6 @@ playerTwo.addEventListener('click',()=>{
 // MENU
 let countdownTimeout;
 const countdownSecondElement = document.getElementById('countdownSecond');
-        
 const countdownElement = document.getElementById('countdown');
 
 let timeLeft = 10;
