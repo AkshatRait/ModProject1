@@ -51,3 +51,12 @@ If you'd like to contribute to the project, please follow these steps:
 + Make your changes and commit them.
 + Push your changes to your fork on GitHub.
 + Open a pull request to the original repository.
+
+ ### Features I would like to add if I had more time:
+ + 2 player mode
+ + More levels
+ + Finish the game
+ + Custom url's for Level 3
+ + Custom Background
+ + Add bombs or obstackles to make it more challenging
+   
